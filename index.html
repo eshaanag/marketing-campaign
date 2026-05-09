@@ -20,9 +20,48 @@
   --text-muted: #6b6b60;
   --warm-dark: #1c1510;
 }
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--white);color:var(--black);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.75;}
-
+/* ── TOP NAVIGATION ── */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  pointer-events: none; /* Allows clicking through the container */
+}
+.nav-container {
+  background: rgba(13, 13, 13, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 6px 10px;
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: auto; /* Re-enables clicking for the inner nav */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.nav-link {
+  color: var(--white);
+  text-decoration: none;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.nav-link:hover {
+  background: var(--coral);
+  color: var(--white);
+}
+.nav-link.active {
+  background: var(--coral);
+}
 /* ── COVER ── */
 .cover{min-height:100vh;background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:80px;position:relative;overflow:hidden;}
 .cover-bg-text{position:absolute;top:-60px;left:-20px;font-family:'Unbounded',sans-serif;font-size:220px;font-weight:900;color:rgba(255,77,46,0.06);line-height:1;white-space:nowrap;pointer-events:none;user-select:none;}
@@ -290,6 +329,14 @@ hr.div{border:none;border-top:2px solid var(--soft-gray);margin:52px 0;}
 </style>
 </head>
 <body>
+
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="https://slikk-decor.vercel.app/" class="nav-link active">Website</a>
+    <a href="https://demo-slikk.vercel.app/" target="_blank" class="nav-link">Demo</a>
+    <a href="https://drive.google.com/file/d/1JLjK5mFVR0CgHtlfYNGZtV_U3tA2C-00/view?usp=drivesdk" target="_blank" class="nav-link">Post</a>
+  </div>
+</nav>
 
 <!-- ════════════════════════════════════ COVER ════════════════════════════════════ -->
 <div class="cover">
@@ -844,7 +891,7 @@ hr.div{border:none;border-top:2px solid var(--soft-gray);margin:52px 0;}
                   <div class="prod-price">₹799</div>
                   <div class="prod-tag">Candle + Mug</div>
                 </div>
-              </div>
+                           </div>
               <div class="prod-card">
                 <div class="prod-img" style="background:#f0f5e8;">🌱</div>
                 <div class="prod-info">
@@ -946,9 +993,9 @@ hr.div{border:none;border-top:2px solid var(--soft-gray);margin:52px 0;}
     <div class="off-card dark">
       <h3>Week 1–2: OOH Teaser</h3>
       <ul>
-        <li><strong>Auto Branding:</strong> Wrap 20–30 HSR autos with Slikk creative — a moody "before" room on one side, vivid glowed-up "after" on the other. Copy: <em>"Your room called. It said 60 mins."</em></li>
-        <li><strong>Café Table Tents:</strong> Place branded table cards at 15–20 HSR cafes (Third Wave, Matteo, Starbucks HSR). QR → app download. Copy: <em>"Ordering a latte was easy. Your aesthetic home can be too."</em></li>
-        <li><strong>Apartment Gate Stickers:</strong> A5 stickers at entrance boards of top 30 HSR apartment complexes. Copy: <em>"Your neighbors already ordered. You're up."</em></li>
+        <li><light>Auto Branding:</light> Wrap 20–30 HSR autos with Slikk creative — a moody "before" room on one side, vivid glowed-up "after" on the other. Copy: <em>"Your room called. It said 60 mins."</em></li>
+        <li><light>Café Table Tents:</light> Place branded table cards at 15–20 HSR cafes (Third Wave, Matteo, Starbucks HSR). QR → app download. Copy: <em>"Ordering a latte was easy. Your aesthetic home can be too."</em></li>
+        <li><light>Apartment Gate Stickers:</light> A5 stickers at entrance boards of top 30 HSR apartment complexes. Copy: <em>"Your neighbors already ordered. You're up."</em></li>
       </ul>
     </div>
     <div class="off-card cream">
@@ -962,9 +1009,9 @@ hr.div{border:none;border-top:2px solid var(--soft-gray);margin:52px 0;}
     <div class="off-card dark">
       <h3>Week 3–4: Community Loop</h3>
       <ul>
-        <li><strong>HSR WhatsApp Community Drops:</strong> Work with RWA groups and popular neighborhood WhatsApp groups. Referral offer: <em>"First 50 orders from your building = free delivery for 30 days."</em> Peer trust drives conversion.</li>
-        <li><strong>Apartment Lobby Display Rack:</strong> With RWA permission, place a small Slikk Home Decor rack in 5 top apartment lobby areas for 1 week. Residents browse, scan QR, get 60-min delivery without cold-starting the app.</li>
-        <li><strong>"What HSR is Decorating" Story Series:</strong> Collect photo reviews from Week 2 deliveries and post as a weekly Instagram Story series. Hyperlocal social proof — "your neighbor has this" is the most powerful push.</li>
+        <li><light>HSR WhatsApp Community Drops:</light> Work with RWA groups and popular neighborhood WhatsApp groups. Referral offer: <em>"First 50 orders from your building = free delivery for 30 days."</em> Peer trust drives conversion.</li>
+        <li><light>Apartment Lobby Display Rack:</light> With RWA permission, place a small Slikk Home Decor rack in 5 top apartment lobby areas for 1 week. Residents browse, scan QR, get 60-min delivery without cold-starting the app.</li>
+        <li><light>"What HSR is Decorating" Story Series:</light> Collect photo reviews from Week 2 deliveries and post as a weekly Instagram Story series. Hyperlocal social proof — "your neighbor has this" is the most powerful push.</li>
       </ul>
     </div>
     <div class="off-card cream">

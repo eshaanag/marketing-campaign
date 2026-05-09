@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/slikk_home_decor_case.html" }
+    { "source": "/", "destination": "/index.html" }
   ]
 }
